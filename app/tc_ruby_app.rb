@@ -1,7 +1,7 @@
 require_relative "ruby_app"
-require "test/unit"
+require "minitest/autorun"
 
-class TestPerson < Test::Unit::TestCase
+class TestPerson < MiniTest::Unit::TestCase
 
   def test_simple
     assert_equal(4, Person.new("Elmo", 4).age )
