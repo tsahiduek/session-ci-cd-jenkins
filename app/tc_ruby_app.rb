@@ -1,5 +1,7 @@
 require_relative "ruby_app"
 require "minitest/autorun"
+require "minitest/reporters"
+Minitest::Reporters.use! Minitest::Reporters::JUnitReporter.new
 
 class TestPerson < MiniTest::Unit::TestCase
 
