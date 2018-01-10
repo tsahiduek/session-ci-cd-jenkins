@@ -14,3 +14,7 @@ end
 get '/get_contacts' do
   main_phonebook.get_pb.to_json
 end
+
+get '/health' do
+  "I'm healthy!!"
+end
