@@ -40,17 +40,17 @@ class Contact
   end
 end
 
-contact_1 = Contact.new("Arie", "Belenky", "Givataim", "054-6504656")
-contact_2 = Contact.new("Gil", "Cohen", "Tel Aviv", "054-6666666")
-contact_3 = Contact.new("Ohad", "Basan", "Tel Aviv", "052-6666666")
-
-pb = PhoneBook.new
-
-pb.add_contact(contact_1)
-pb.add_contact(contact_2)
-pb.add_contact(contact_3)
-
-pb.list_contact
-puts pb.get_pb
+# contact_1 = Contact.new("Arie", "Belenky", "Givataim", "054-6504656")
+# contact_2 = Contact.new("Gil", "Cohen", "Tel Aviv", "054-6666666")
+# contact_3 = Contact.new("Ohad", "Basan", "Tel Aviv", "052-6666666")
+#
+# pb = PhoneBook.new
+#
+# pb.add_contact(contact_1)
+# pb.add_contact(contact_2)
+# pb.add_contact(contact_3)
+#
+# pb.list_contact
+# puts pb.get_pb
 
 
