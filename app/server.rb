@@ -2,6 +2,7 @@ require_relative "ruby_app"
 require 'sinatra'
 
 set :port, 5005
+set :environment, :production
 
 main_phonebook = PhoneBook.new
 

@@ -1,9 +1,8 @@
-FROM ruby:2.1-onbuild
+FROM ruby:2.3.3-alpine
 
-RUN mkdir /source
+RUN mkdir /myapp
+WORKDIR /myapp
+COPY ./app/ /myapp
+RUN bundle install
 
-WORKDIR /source
-ADD ./app/ /source
-EXPOSE 5005
-CMD ["bundle install"]
-CMD ["./server.rb"]
+CMD ["ruby", "server.rb"]

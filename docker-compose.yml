@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  opsschool_dummy_app:
+    image: localhost:5000/opsschool_dummy_app:latest
+    ports:
+      - "5005:5005"
+
+    restart: always
+    container_name: opsschool_dummy_app
