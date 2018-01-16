@@ -30,4 +30,9 @@ class TestPerson < MiniTest::Unit::TestCase
                  Contact.new("Ben", "Cohen", "Tel Aviv", "054-6666666").first_name)
   end
 
+  def test_simple_six
+    assert_equal("Ben",
+                 Contact.new("Ben", "Cohen", "Tel Aviv", "054-6666666").first_name)
+  end
+
 end
