@@ -21,8 +21,8 @@ class TestPerson < MiniTest::Unit::TestCase
   end
 
   def test_simple_four
-    assert_equal("Glenn",
-                 Contact.new("Glenn", "Cohen", "Tel Aviv", "054-6666666").first_name)
+    assert_equal("Jeff",
+                 Contact.new("Jeff", "Cohen", "Tel Aviv", "054-6666666").first_name)
   end
 
 end
