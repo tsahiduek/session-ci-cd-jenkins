@@ -6,7 +6,7 @@ Minitest::Reporters.use! Minitest::Reporters::JUnitReporter.new
 class TestPerson < MiniTest::Unit::TestCase
 
   def test_simple_one
-    assert_equal("Arie",
+    assert_equal("David",
                  Contact.new("Arie", "Belenky", "Givataim", "054-6504656").first_name)
   end
 
