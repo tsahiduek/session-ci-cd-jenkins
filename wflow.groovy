@@ -16,13 +16,11 @@ node ('opsschool-slaves'){
         sh 'sudo docker build --no-cache -t localhost:5000/opsschool_dummy_app:latest .'
         sh 'sudo docker push localhost:5000/opsschool_dummy_app:latest'
         sh 'sudo docker-compose stop'
-
-        sh '''
-                if [ ! "$(sudo docker ps -q -f name=opsschool_dummy_app)" ]; then
-                    sudo docker rm -f opsschool_dummy_app
-                fi
-            '''
-
+        try {
+            sh 'sudo docker rm -f opsschool_dummy_app'
+        } catch (e){
+            print e
+        }
     }
 
     stage('Deploy'){
