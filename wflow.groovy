@@ -22,6 +22,11 @@ node ('opsschool-slaves'){
                 'fi'
     }
 
+    stage('Deploy'){
+        sh 'sudo docker pull localhost:5000/opsschool_dummy_app:latest'
+        sh 'sudo docker-compose up -d'
+    }
+
     junit 'test/reports/*.xml'
 
 }
