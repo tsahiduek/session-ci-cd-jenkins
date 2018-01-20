@@ -5,10 +5,9 @@ node ('opsschool-slaves'){
 
         checkout scm
     }
-    
+
     stage('Test'){
-        def out = sh script: 'ls -ltrh', returnStdout: true
-        out()
+        sh 'ls -ltrha'
     }
 
 }
