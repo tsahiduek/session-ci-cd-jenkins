@@ -22,4 +22,6 @@ node ('opsschool-slaves'){
                 'fi'
     }
 
+    junit 'test/reports/*.xml'
+
 }
