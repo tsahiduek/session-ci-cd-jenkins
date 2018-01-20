@@ -17,9 +17,7 @@ node ('opsschool-slaves'){
         sh 'sudo docker push localhost:5000/opsschool_dummy_app:latest'
         sh 'sudo docker-compose stop'
 
-        sh 'if [ ! "$(sudo docker ps -q -f name=opsschool_dummy_app)" ]; then\n' +
-                '\tsudo docker rm -f opsschool_dummy_app\n' +
-                'fi'
+        sh 'if [ ! "$(sudo docker ps -q -f name=opsschool_dummy_app)" ]; then\n \tsudo docker rm -f opsschool_dummy_app\n fi'
     }
 
     stage('Deploy'){
