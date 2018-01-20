@@ -1,7 +1,8 @@
-node {
-    // This displays colors using the 'xterm' ansi color map.
-    ansiColor('xterm') {
-        // Just some echoes to show the ANSI color.
-        stage "\u001B[31mI'm Red\u001B[0m Now not"
+node ('opsschool-slaves'){
+    currentBuild.result = "SUCCESS"
+    stage('Test'){
+        sh 'ruby app/tc_ruby_app.rb'
+        sh 'ls -ltrh test/reports/'
     }
+
 }
