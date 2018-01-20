@@ -19,7 +19,7 @@ node ('opsschool-slaves'){
 
         def remove_container = sh '"$(sudo docker ps -q -f name=opsschool_dummy_app)"'
         if (remove_container){
-            sh 'sudo docker rm -f opsschool_dummy_app'
+            sh 'sudo docker rm -f ' + remove_container
         }
 
     }
