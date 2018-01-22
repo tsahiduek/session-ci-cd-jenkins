@@ -2,7 +2,6 @@ node ('trailer_cook'){
     currentBuild.result = "SUCCESS"
 
     stage('Checkout'){
-
         checkout scm
     }
 
