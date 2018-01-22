@@ -1,4 +1,4 @@
-node ('opsschool-slaves'){
+node ('trailer_cook'){
     currentBuild.result = "SUCCESS"
 
     stage('Checkout'){
