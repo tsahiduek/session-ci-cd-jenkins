@@ -3,7 +3,7 @@ require "minitest/autorun"
 require "minitest/reporters"
 Minitest::Reporters.use! Minitest::Reporters::JUnitReporter.new
 
-class TestPerson < MiniTest::Unit::TestCase
+class TestPerson < MiniTest::Test #Unit::TestCase
 
   def test_simple_one
     assert_equal("Arie",
