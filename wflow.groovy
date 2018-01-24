@@ -18,6 +18,7 @@ node ('opsschool-slaves'){
         sh 'sudo docker-compose stop'
         try {
             sh 'sudo docker rm -f opsschool_dummy_app'
+            sh 'sudo docker rm -f dummyappbuildworkflow_nginx_1'
         } catch (e){
             print e
         }
